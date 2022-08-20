@@ -19,24 +19,15 @@
 }
 
 .hero__title {
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
+  @include font(900, 44px, 1.36, 0.06em, center);
   text-transform: uppercase;
   color: $minor-text-color;
   margin-bottom: 30px;
-  font-weight: 900;
 }
 .hero__btn {
+  @include centeredFlex(flex, center, null);
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 1.88, 0.06em, center);
   color: $minor-text-color;
   background-color: $accent-color;
   cursor: pointer;
@@ -44,9 +35,14 @@
   padding: 10px 32px;
   min-width: 200px;
   border: transparent;
-  display: block;
   margin: 0 auto;
-  transition: background-color $time-duration $time-function;
+  @include transition(
+    background-color,
+    null,
+    null,
+    $time-duration,
+    $time-function
+  );
   &:hover,
   &:focus {
     background-color: $secondary-accent-color;

@@ -1,11 +1,12 @@
 @import "./utils/variables";
 @import "./base/normalize";
 @import "./base/reset";
+@import "./utils/mixins";
 @import "./base/common";
 @import "./utils/hidden";
 @import "./components/container";
-@import "./layouts/header";
 
+@import "./layouts/header";
 @import "./layouts/hero";
 @import "./components/title";
 @import "./layouts/benefits";
@@ -14,6 +15,8 @@
 @import "./components/soc-net";
 @import "./layouts/clients";
 @import "./layouts/footer";
+@import "./components/join";
+@import "./components/sign";
 
 @import "./components/modal";
 

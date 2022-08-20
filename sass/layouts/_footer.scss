@@ -1,38 +1,29 @@
 .footer__box {
-  display: flex;
-  align-items: baseline;
+  @include centeredFlex(flex, baseline, null);
 }
 .logo__box {
   margin-bottom: 20px;
 }
-
 .footer {
   padding: 60px 0;
 }
 .footer__logo {
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font(null, 26px, 1.19, 0.03em, null);
   color: $minor-text-color;
 }
 .footer__adress {
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.71, 0.03em, null);
   color: $minor-text-color;
   margin-bottom: 9px;
 }
 
 .footer__contacts {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(400, 14px, 1.71, 0.03em, null);
   color: $footer-contacts-color;
-  transition: color $time-duration $time-function;
+  @include transition(color, null, null, $time-duration, $time-function);
   &:hover,
   &:focus {
     color: $accent-color;
@@ -40,104 +31,4 @@
   &--mail {
     margin-bottom: 9px;
   }
-}
-
-/* -------------------------Приєднуйтесь-------------------- */
-.join {
-  margin-left: 70px;
-}
-.join__text,
-.sign__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $minor-text-color;
-  margin-bottom: 20px;
-}
-.join__list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.join__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  outline: transparent;
-  color: $minor-text-color;
-  background-color: $footer-icon-bc;
-  transition: background-color $time-duration $time-function;
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-  }
-}
-
-.join__icon {
-  fill: currentColor;
-}
-/* ------------------підпишись----------------- */
-.sign {
-  margin-left: auto;
-}
-.sign__form {
-  display: flex;
-  align-items: center;
-}
-.sign__input {
-  width: 358px;
-  height: 50px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  outline: transparent;
-  padding: 15px 0 15px 16px;
-  margin-right: 12px;
-  transition: border-color $time-duration $time-function;
-  &:focus {
-    border-color: $accent-color;
-  }
-  &::placeholder {
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.03em;
-    color: $sign-placeholder-color;
-  }
-}
-
-.sign__btn {
-  font-family: inherit;
-  width: 200px;
-  height: 50px;
-  padding: 10px 28px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: $minor-text-color;
-  background-color: $accent-color;
-  border-radius: 4px;
-  border: none;
-  position: relative;
-  transition: background-color $time-duration $time-function;
-  &:hover,
-  &:focus {
-    background-color: $secondary-accent-color;
-  }
-}
-.sign__icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 28px;
 }

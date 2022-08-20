@@ -1,25 +1,23 @@
-$.filter__list {
+.filter__list {
+  @include centeredFlex(flex, null, center);
   margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
 }
 .filter__btn {
+  @include centeredFlex(inline-block, center, null);
   font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  text-align: center;
-  letter-spacing: 0.03em;
+  @include font(500, 16px, 1.63, 0.03em, center);
   background-color: $background-btn-color;
   cursor: pointer;
   border-radius: 4px;
   padding: 6px 22px;
-  display: inline-block;
-  text-align: center;
   border: transparent;
-  transition: color $time-duration $time-function,
-    background-color $time-duration $time-function,
-    box-shadow $time-duration $time-function;
+  @include transition(
+    color,
+    background-color,
+    box-shadow,
+    $time-duration,
+    $time-function
+  );
   &:hover,
   &:focus,
   &--current {

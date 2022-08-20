@@ -1,10 +1,11 @@
 .example__list {
-  display: flex;
+  @include centeredFlex(flex, null, null);
   flex-wrap: wrap;
 }
 
 .example__item {
-  flex-basis: calc((100% - (2 * 30px)) / 3);
+  // flex-basis: calc((100% - (2 * 30px)) / 3);
+  @include item(2, $gap, 3);
   margin-right: 30px;
   margin-bottom: 30px;
   &:nth-child(3n) {
@@ -16,10 +17,7 @@
 }
 
 .example__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include font(700, 18px, 2, 0.06em, null);
   margin-bottom: 4px;
   color: $primary-text-color;
 }
@@ -28,9 +26,7 @@
   overflow: hidden;
 }
 .example__overlay {
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
+  @include font(null, 18px, 1.55, 0.03em, null);
   color: $minor-text-color;
   background-color: $bg-example-box-color;
   width: 100%;
@@ -40,7 +36,7 @@
   top: 0;
   left: 0;
   transform: translateY(101%);
-  transition: transform $time-duration $time-function;
+  @include transition(transform, null, null, $time-duration, $time-function);
   overflow: auto;
   .example__link:hover &,
   .example__link:focus & {
@@ -53,14 +49,12 @@
 }
 
 .example__text {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
+  @include font(null, 16px, 1.88, 0.03em, null);
   color: $secondary-text-color;
 }
 .example__link {
   display: inline-block;
-  transition: box-shadow $time-duration $time-function;
+  @include transition(box-shadow, null, null, $time-duration, $time-function);
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

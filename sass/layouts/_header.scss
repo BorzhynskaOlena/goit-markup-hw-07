@@ -1,15 +1,12 @@
 .page-header__box,
 .site-nav__list {
-  display: flex;
-  align-items: center;
+  @include centeredFlex(flex, center, null);
 }
 
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font(null, 26px, 1.19, 0.03em, null);
   color: $accent-color;
   .site-nav & {
     padding: 24px 0;
@@ -19,8 +16,7 @@
   color: $logo-header-color;
 }
 .site-nav {
-  display: flex;
-  align-items: center;
+  @include centeredFlex(flex, center, null);
 }
 
 .site-nav__list {
@@ -28,15 +24,12 @@
 }
 
 .site-nav__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   display: block;
+  @include font(500, 14px, 1.14, 0.02em, null);
   padding-top: 32px;
   padding-bottom: 32px;
   color: $primary-text-color;
-  transition: color $time-duration $time-function;
+  @include transition(color, null, null, $time-duration, $time-function);
   &:hover,
   &:focus {
     color: $accent-color;
@@ -65,8 +58,7 @@
 }
 
 .header-contacts__list {
-  display: flex;
-  align-items: center;
+  @include centeredFlex(flex, center, null);
   margin-left: auto;
   & .header-contacts__item + .header-contacts__item {
     margin-left: 50px;
@@ -74,16 +66,12 @@
 }
 
 .header-contacts__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include centeredFlex(flex, center, null);
+  @include font(500, 14px, 1.14, 0.02em, null);
   color: $secondary-text-color;
-  display: flex;
-  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color $time-duration $time-function;
+  @include transition(color, null, null, $time-duration, $time-function);
   &:hover,
   &:focus {
     color: $accent-color;
