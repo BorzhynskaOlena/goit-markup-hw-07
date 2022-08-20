@@ -7,11 +7,7 @@
 .footer {
   padding: 60px 0;
 }
-.footer__logo {
-  font-family: "Raleway", sans-serif;
-  @include font(null, 26px, 1.19, 0.03em, null);
-  color: $minor-text-color;
-}
+
 .footer__adress {
   font-style: normal;
   @include font(null, 14px, 1.71, 0.03em, null);

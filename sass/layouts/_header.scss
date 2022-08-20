@@ -3,18 +3,6 @@
   @include centeredFlex(flex, center, null);
 }
 
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  @include font(null, 26px, 1.19, 0.03em, null);
-  color: $accent-color;
-  .site-nav & {
-    padding: 24px 0;
-  }
-}
-.page-header__logo {
-  color: $logo-header-color;
-}
 .site-nav {
   @include centeredFlex(flex, center, null);
 }
