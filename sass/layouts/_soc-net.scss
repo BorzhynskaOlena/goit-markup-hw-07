@@ -1,0 +1,27 @@
+.soc-net__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-net__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: transparent;
+  color: $icon-color;
+  background-color: $main-background-color;
+  transition: color $time-duration $time-function,
+    background-color $time-duration $time-function;
+  &:hover,
+  &:focus {
+    color: $minor-text-color;
+    background-color: $accent-color;
+  }
+}
+
+.soc-net__icon {
+  fill: currentColor;
+}

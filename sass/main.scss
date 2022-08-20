@@ -1,1 +1,21 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./base/reset";
+@import "./base/common";
+@import "./utils/hidden";
+@import "./components/container";
+@import "./layouts/header";
 
+@import "./layouts/hero";
+@import "./components/title";
+@import "./layouts/benefits";
+@import "./layouts/work";
+@import "./layouts/team";
+@import "./components/soc-net";
+@import "./layouts/clients";
+@import "./layouts/footer";
+
+@import "./components/modal";
+
+@import "./components/btn";
+@import "./layouts/portfolio";
